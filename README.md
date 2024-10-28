@@ -1,3 +1,7 @@
+![ Istio ](https://sysdig.com/wp-content/uploads/image4.jpeg)
+
+# Enable Canary Deployment in K8s with Istio
+
 A canary release is a testing strategy that involves rolling out new versions of applications gradually, so engineers can test new features in production with a limited set of users before making them avaiable to everyone. In the K8s ecosystem, combining Istio with K8s is a good way to implement canary releases.
 
 This article will guide you through the steps necessary to set up a canary release strategy using Istio on K8s
