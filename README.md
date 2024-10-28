@@ -30,22 +30,35 @@ validating, ingesting, aggregating, transforming, and distributing config with I
 
 1. Installing Istio on your cluster
 
+```
 > curl -L https://istio.io/downloadIstio | sh -
 > cd istio-*
 > export PATH=$PWD/bin:$PATH
+```
 
 2. Deploy Istio on your cluster
+
+```
 istioctl install --set profile=default -y
+```
 
 3. Enable automatic sidecar injection
+
+```
 kubectl label namespace default istio-injection=enabled
 kubectl get pods -n istio-system
+```
 
 4. Apply v1 app deployment manifest
 5. Apply Istio configs manifest
 6. Apply v2 app deployment manifest
 
 7. run minikube tunnel command
+
+```
+minikube tunnel
+
+```
 You will now be able to access your application at http://localhost/home/. If you refresh the page rapidly, you will notice that v1 shows up more than v2.
 
 ## Conclusion
